@@ -1,0 +1,429 @@
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: black !important;
+}
+
+h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 72px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 50px;
+}
+
+h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 50px;
+}
+
+h3 {
+    font-family: 'Archivo Black', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 28px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    /* display: inline; */
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1100;
+    line-height: normal;
+    font-size: 22px;
+    font-style: italic;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+    /* display: inline; */
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    /*margin: 0px 310px 0px 310px;*/
+}
+
+.introtext {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.conclusion-text-1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 30px 0px 0px 0px;
+    opacity: 0;
+}
+
+.conclusion-text-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 34px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 40px 0px 0px 0px;
+    opacity: 0;
+}
+
+.tipping-pt-text {
+    color: white;
+    font-weight: 900;
+}
+
+.axis text {
+    fill: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: white;
+    shape-rendering: crispEdges;
+    stroke-width: 0.8px;
+}
+
+.line {
+    fill: none;
+    /* stroke: white; */
+    stroke-width: 1.5px;
+}
+
+.stabilized-line {
+    fill: none;
+    stroke: #008700;
+    stroke-width: 2px;
+}
+
+#intro-section {
+    z-index: 999;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+#map-section {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 0px;
+    top: 0;
+    left: 0;
+}
+
+#final-section {
+    z-index: 999;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.section-text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    /*text-align: left;*/
+    color: #FFFFFF;
+    /*padding-left: 25px;
+    position: relative;
+    top: 390px;*/
+}
+
+.section-text-full {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 15px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-left: 25px;
+    position: relative;
+    top: 400px;
+}
+
+#finalGraph {
+    display: table;
+    margin: 0 auto;
+}
+
+.restart-btn {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: 0 20px 20px 0;
+}
+
+
+/************************** style for pagination/dot navigation ***************************/
+
+/*.pagination {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    z-index: 10;
+    display: none;
+}*/
+
+    .pagination a {
+        display: block;
+        height: 20px;
+        margin-bottom: 5px;
+        color: white;
+        position: relative;
+        padding: 4px;
+        cursor: default;
+    }
+
+        .pagination a.active:after {
+            box-shadow: inset 0 0 0 5px;
+        }
+
+        .pagination a .hover-text {
+            position: absolute;
+            right: 15px;
+             top: 7px; 
+            opacity: 0;
+            -webkit-transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease;
+            padding-right: 15px;
+        }
+
+        .pagination a:hover .hover-text {
+            opacity: 1;
+        }
+
+        .pagination a:after {
+            -webkit-transition: box-shadow 0.5s ease;
+            transition: box-shadow 0.5s ease;
+            width: 10px;
+            height: 10px;
+            display: block;
+            border: 1px solid;
+            border-radius: 50%;
+            content: '';
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 4px;
+            bottom: 0;
+        }
+
+
+/************************ Arrow *****************************/
+
+@keyframes arrow {
+    0%, 100% {
+        top: 10px;
+    }
+
+    50% {
+        top: 30px;
+    }
+}
+
+.scroll:after {
+    content: '';
+    position: fixed;
+    z-index: 9999;
+    bottom: -630px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-right: 2px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    transform: rotate(45deg);
+    animation: 2s arrow infinite ease;
+}
+
+
+/********************** style form map ****************************************/
+
+#projection-menu {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.stroke {
+    fill: none;
+    stroke: #000;
+    stroke-width: 3px;
+}
+
+.fill {
+    fill: black;
+}
+
+.graticule {
+    fill: none;
+    stroke: #777;
+    stroke-width: .5px;
+    stroke-opacity: .5;
+}
+
+.land {
+    fill: #d8d8d8;
+    opacity: 0;
+}
+
+.boundary {
+    fill: none;
+    stroke: #fff;
+    stroke-width: .5px;
+}
+
+#map {
+    padding-top: 108px;
+    padding-left: 50px;
+    opacity: 0;
+}
+
+.container {
+    position: sticky;
+    top: 0;
+    width: 98%;
+    padding-left: 37px;
+    margin-bottom: -30px;
+    margin-top: -10px;
+}
+
+#timeline-1 {
+    /* height: 100%; */
+    height: 1000px;
+    background: linear-gradient(yellow, orange);
+    width: 40px;
+    position: relative;
+}
+
+#timeline-2 {
+    height: 1000px;
+    background: linear-gradient(orange, red);
+    width: 40px;
+    position: relative;
+}
+
+#timeline-3 {
+    height: 1000px;
+    background: linear-gradient(red, black);
+    width: 40px;
+    position: relative;
+}
+
+.yearSection {
+    height: 40px;
+}
+
+.group-1 ellipse {
+    fill: yellow;
+}
+
+.group-2 ellipse {
+    fill: orange;
+}
+
+.group-3 ellipse {
+    fill: red;
+}
+
+.link-group-1 {
+    stroke: yellow;
+    stroke-opacity: 0.6;
+}
+
+.link-group-2 {
+    /* stroke: orange; */
+    stroke-opacity: 0.6;
+}
+
+.link-group-3 {
+    /* stroke: red; */
+    stroke-opacity: 0.6;
+}
+
+.node text {
+    stroke: #333;
+    cursor: pointer;
+}
+
+foreignObject {
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/************************ TIMER *****************************/
+
+#timer {
+    display: table;
+    margin: 45px auto;
+    margin-right: 40px;
+}
+
+#my-timer {
+    background: black;
+}
+
+    #my-timer circle:nth-child(1) {
+        fill: black;
+    }
+
+    #my-timer circle:nth-child(2) {
+        fill: black;
+        stroke: white;
+    }
+
+    #my-timer .percentage {
+        color: white;
+        display: none;
+    }
