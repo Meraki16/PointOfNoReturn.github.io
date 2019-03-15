@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" content="initial-scale=1, maximum-scale=1" />
+    <title>THE POINT OF NO RETURN</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="scripts/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="scripts/jquery-pie-loader-master/jquery-pie-loader.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Montserrat" rel="stylesheet">
+    <script src="scripts/d3/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.min.js"></script>
+    <script src="scripts/d3/d3.min.js"></script>
+    <script src="scripts/d3/d3-geo-projection.v2.min.js"></script>
+    <script src="scripts/topojson/topojson.js"></script>
+</head>
+<body>
+
+    <div id="intro-section" class=".container-fluid panel home" data-section-name="home">
+        <div class="row">
+            <div class="col-lg-1 col-sm-1">
+
+            </div>
+            <div class="col-lg-10 col-sm-11">
+                <div class="jumbotron text-center">
+                    <h1> THE POINT OF NO RETURN</h1>
+                </div>
+            </div>
+            <div class="col-lg-1">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-sm-2">
+
+            </div>
+            <div class="col-lg-10 col-sm-10 introtext">
+                <div style="text-align:justify;">
+                    A significant temperature rise has been observed since pre-industrial times due to human actions and degradation of the environment.To understand the Earth’s future, many pathways have been projected.Think about the climate at intermediate temperature rises - the effects of global warming that are already visible. Now, consider that Earth is a complex ecosystem whose processes affect each other. What if these processes entered a state of continuous mutual influence causing higher temperature rises, even if human emissions were reduced?
+                    <br />
+                    <br />
+                    Meet our <b>TIPPING POINT</b> - the threshold for abrupt and irreversible change.
+                </div>
+            </div>
+            <div class="col-lg-1 col-sm-2">
+
+            </div>
+            <!-- globe -->
+            <!--<div class="col-lg-4" id="webgl"></div>-->
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-2"></div>
+            <div class="col-lg-9 col-sm-10" id="globecontainer">
+                <div id="webgl"></div>
+            </div>
+            <!--<div class="col-lg-4" id="webgl"></div>-->
+        </div>
+        <div class="row">
+            <a href="" class="scroll"></a>
+        </div>
+    </div>
+    <!-- arrow -->
+    <!--</section>-->
+    <!--<section class="panel panel1" data-section-name="0-1C">-->
+    <!--<div class="panel panel1" data-section-name="0-1C">-->
+    <div class=".container-fluid panel panel1" data-section-name="0-1C">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="row">
+                    <div id="main-graph"></div>
+                </div>
+                <div class="row">
+                    <div id="text1" class="section-text ml-5">
+                        <h3>0 - 1&#176;C</h3>
+                        <h4>What's going on?</h4>
+                        A rise of temperature is noticed along with the first impacts.
+                        <br /><br />
+                        Loss of Antarctic summer sea ice
+                        <br />
+                        &rArr; decreases the albedo (reflection of sunlight)
+                        <br />
+                        &rArr; amplifies regional warming
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div id="map"></div>
+            </div>
+
+        </div>
+    </div>
+    <!--</div>-->
+    <!--<div id="map-section">-->
+    <!--</section>-->
+    <section class="panel panel2" data-section-name="1-3C">
+        <div class="col-lg-3">
+            <div id="text2" class="section-text">
+                <h3>1 - 3&#176;C</h3>
+                <h4>What's going on?</h4>
+                Temperature jumps slightly and increases faster than before.
+                </br>
+                </br>
+                Loss of summer sea ice reaches the Arctic too.
+                </br>
+                </br>
+                Permafrost and oceanic methane storages melt; Oceanic bacteria become more active
+                </br>
+                &rArr; higher release of CO2 and/or CH4
+            </div>
+        </div>
+    </section>
+    <section class="panel panel3" data-section-name="3-5C">
+        <div class="col-lg-3">
+            <div id="text3" class="section-text">
+                <h3>3 - 5&#176;C</h3>
+                <h4>What's going on?</h4>
+                We are heading rapidly towards 5&#176;C which will cause another cascade of processes and thus a jump in temperature.
+                </br>
+                </br>
+                Gradual dying of the Amazon and Boreal forest
+                </br>
+                &rArr; higher release of CO2
+                </br>
+                (often through wildfire)
+            </div>
+        </div>
+    </section>
+    <section class="panel panel4" data-section-name="+5C">
+        <div class="col-lg-3">
+            <div id="text4" class="section-text">
+                <h3>5&#176;C - ?</h3>
+                <h4>What's going on?</h4>
+                We can't know for sure.
+                </br>
+                </br>
+                The last time Earth reached this level of temperature, 95% of all species were wiped out...
+            </div>
+        </div>
+    </section>
+    <section class="panel end" data-section-name="end">
+        <div id="final-section" class=".container-fluid">
+            <div class="col-lg-12" style="height: 100%;">
+                <h2>THE POINT OF NO RETURN</h2>
+                <div id="finalGraph"></div>
+                <div class="conclusion-text-1">
+                    Acting before we reach the <span class="tipping-pt-text">TIPPING POINT</span> can change the Earth's pathway.
+                </div>
+                <div class="conclusion-text-2">
+                    What will you do to change the future?
+                </div>
+                <div class="restart-btn">
+                    <a onclick="restartApp()" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 26 26" style=" fill:#ffff;"><g id="surface1"><path style="" d="M 10 0 L 0 2 L 3.03125 5.03125 C 1.273438 7.222656 0.1875 9.972656 0.1875 13 C 0.1875 20.074219 5.921875 25.8125 13 25.8125 C 20.078125 25.8125 25.8125 20.074219 25.8125 13 C 25.8125 7.695313 22.59375 3.132813 18 1.1875 L 18 4.28125 C 21.027344 6.019531 23.0625 9.261719 23.0625 13 C 23.0625 18.5625 18.5625 23.0625 13 23.0625 C 7.4375 23.0625 2.9375 18.5625 2.9375 13 C 2.9375 10.726563 3.695313 8.652344 4.96875 6.96875 L 8 10 Z "></path></g></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="scripts/webgl-earth/js/Detector.js"></script>
+<script src="scripts/globeScript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts/Scrollify/jquery.scrollify.js"></script>
+<script type="text/javascript" src="scripts/jquery-pie-loader-master/jquery-pie-loader.js"></script>
+<script src="scripts/main.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</html>
