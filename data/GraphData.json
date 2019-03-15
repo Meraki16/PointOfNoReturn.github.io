@@ -1,0 +1,192 @@
+{
+    "nodes": [{
+            "id": 0,
+            "name": "GreenLand Ice Sheet",
+            "tempStart": 1,
+            "tempEnd": 3,
+            "x": -42.236322,
+            "y": 76.271779
+
+        },
+        {
+            "id": 1,
+            "name": "Arctic Summer Sea-ice",
+            "tempStart": 1,
+            "tempEnd": 3,
+            "x": 16.717717,
+            "y": 67.458635
+        },
+        {
+            "id": 2,
+            "name": "Alpine Glaciers",
+            "tempStart": 1,
+            "tempEnd": 3,
+            "x": 37.602246,
+            "y": 47.245844
+        },
+        {
+            "id": 3,
+            "name": "Coral Reefs",
+            "tempStart": 1,
+            "tempEnd": 3,
+            "x": 142.891591,
+            "y": -11.357011
+        },
+        {
+            "id": 4,
+            "name": "West Antarctic Ice Sheet",
+            "tempStart": 1,
+            "tempEnd": 3,
+            "x": -70.311082,
+            "y": -73.443147
+        },
+        {
+            "id": 5,
+            "name": "Boreal Forest",
+            "tempStart": 3,
+            "tempEnd": 5,
+            "x": -135.983558,
+            "y": 60.003470
+        },
+        {
+            "id": 6,
+            "name": "Jet Stream",
+            "tempStart": 3,
+            "tempEnd": 5,
+            "x": -65.741492,
+            "y": 59.638475
+        },
+        {
+            "id": 7,
+            "name": "El Nino Southern Oscillation",
+            "tempStart": 3,
+            "tempEnd": 5,
+            "x": -105.691060,
+            "y": 23.108742
+        },
+        {
+            "id": 8,
+            "name": "Thermohaline Circulation",
+            "tempStart": 3,
+            "tempEnd": 5,
+            "x": -31.441893,
+            "y": 18.137279
+        },
+        {
+            "id": 9,
+            "name": "Amazon Rainforest",
+            "tempStart": 3,
+            "tempEnd": 5,
+            "x": -49.348092,
+            "y": -5.389506
+        },
+        {
+            "id": 10,
+            "name": "Sahel",
+            "tempStart": 3,
+            "tempEnd": 5,
+            "x": 17.941832,
+            "y": 20.897109
+        },
+        {
+            "id": 11,
+            "name": "Indian Summer Monsoon",
+            "tempStart": 3,
+            "tempEnd": 5,
+            "x": 80.799743,
+            "y": 26.037806
+        },
+        {
+            "id": 12,
+            "name": "Arctic Winter Sea-ice",
+            "tempStart": 5,
+            "tempEnd": 99,
+            "x": 65.678116,
+            "y": 75.130537
+        },
+        {
+            "id": 13,
+            "name": "Permafrost",
+            "tempStart": 5,
+            "tempEnd": 99,
+            "x": 103.385550,
+            "y": 64.528296
+        },
+        {
+            "id": 14,
+            "name": "East Antartic Ice Sheet",
+            "tempStart": 5,
+            "tempEnd": 99,
+            "x": 105.006041,
+            "y": -66.708623
+        }
+    ],
+    "links": [{
+            "source": 0,
+            "target": 4,
+            "weight": 20,
+            "temp": "1-3"
+        },
+        {
+            "source": 0,
+            "target": 8,
+            "weight": 20,
+            "temp": "3-5"
+        },
+        {
+            "source": 0,
+            "target": 1,
+            "weight": 20,
+            "temp": "1-3"
+        },
+        {
+            "source": 0,
+            "target": 14,
+            "weight": 20,
+            "temp": "5-99"
+        },
+        {
+            "source": 7,
+            "target": 4,
+            "weight": 20,
+            "temp": "3-5"
+        },
+        {
+            "source": 7,
+            "target": 9,
+            "weight": 20,
+            "temp": "3-5"
+        },
+        {
+            "source": 7,
+            "target": 8,
+            "weight": 20,
+            "temp": "3-5"
+        },
+        {
+            "source": 8,
+            "target": 9,
+            "weight": 20,
+            "temp": "3-5"
+        },
+        {
+            "source": 8,
+            "target": 4,
+            "weight": 20,
+            "temp": "3-5"
+        },
+        {
+            "source": 8,
+            "target": 14,
+            "weight": 20,
+            "temp": "5-99"
+        },
+        {
+            "source": 6,
+            "target": 1,
+            "weight": 20,
+            "temp": "3-5"
+        }
+
+    ]
+}
